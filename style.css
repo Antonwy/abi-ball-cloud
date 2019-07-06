@@ -34,3 +34,36 @@
 .noPhotos {
     font-weight: bold;
 }
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border: solid white 1px;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 250ms;
+}
+
+button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: white;
+    transition: height 250ms;
+    z-index: -1;
+}
+
+button:hover:after {
+    height: 100%;
+}
+
+button:hover {
+    color: black;
+}
+
